@@ -17,10 +17,10 @@
     - Structured Data : RDB, DataFrame
 5. **Lazy**
     - Action 을 하기 전까지 Transformation 은 실행되지 않음. [2]
-    - Action : 데이터셋에 연산을 적용해서 드라이버 프로그램으로 결과를 돌려주기
-      - `return a value to the driver program after running a computation on the dataset`
-    - Transformation : 현존하는 데이터셋으로 새 데이터셋을 만들기
-      - `create a new dataset from an existing one`
+    - Action : 지연실행 됨. 결과를 수집해서 반환(데이터셋에 연산을 적용해서 드라이버 프로그램으로 결과를 돌려준다.)
+    - Transformation : 현존하는 데이터셋으로 새 데이터셋을 만들기. 새로운 RDD가 생성된다. (DAG를 만듦)
+      - Narrow Transforamtion : 1:1로 변환됨. 다른 열/파티션을 참조할 필요 X. (ex. `map()`, `flatmap()`, `filter()` 등)
+      - Wide Transformation : 셔플링(Shuffling)이 일어남. (ex. `union()`, `groupBy()` 등)
 
 ## 관련 함수
 #### Key Value RDD
@@ -29,6 +29,10 @@
     - `reduceByKey()` : 각 맵퍼에서 로컬로 병합을 수행
 - key-val 형태기 때문에, join도 사용 가능
 - key 를 바꾸지 않는 경우 `map()`대신 `mapValues()` 사용 추천 (파티션 유지 가능)
+
+#### `collect()`
+- RDD 안에 있는 값을 전부 가져온다.
+- 당연히 프로덕션 환경에서는 쓰지 말아야한다.
 
 ## 출처
 - [1] https://spark.apache.org/docs/latest/rdd-programming-guide.html
