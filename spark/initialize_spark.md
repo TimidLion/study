@@ -23,7 +23,7 @@
   - 일반적으로 클러스터에서 Spark application 을 실행할 때, `spark-submit` 을 이용해 실행하곤한다. 클러스터 매니저가 이 때 리소스 분배 및 실행 등을 관리. [4]
 
 ## 출처
-[1] https://spark.apache.org/docs/latest/rdd-programming-guide.html#initializing-spark
-[2] https://www.samsungsds.com/kr/insights/Spark-Cluster-job-server.html
-[3] https://spark.apache.org/docs/2.1.0/submitting-applications.html#master-urls
-[4] https://spark.apache.org/docs/latest/submitting-applications.html
+- [1] https://spark.apache.org/docs/latest/rdd-programming-guide.html#initializing-spark
+- [2] https://www.samsungsds.com/kr/insights/Spark-Cluster-job-server.html
+- [3] https://spark.apache.org/docs/2.1.0/submitting-applications.html#master-urls
+- [4] https://spark.apache.org/docs/latest/submitting-applications.html
