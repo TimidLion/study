@@ -22,6 +22,15 @@
     - Transformation : 현존하는 데이터셋으로 새 데이터셋을 만들기
       - `create a new dataset from an existing one`
 
+## 관련 함수
+#### Key Value RDD
+- `reduceByKey()` 와 `groupByKey()`의 차이 [3]
+    - `groupByKey()` : 각 키의 모든 값을 메모리로 가져옴. 순서 보장 X (aggregateByKey 나 foldByKey 추천)
+    - `reduceByKey()` : 각 맵퍼에서 로컬로 병합을 수행
+- key-val 형태기 때문에, join도 사용 가능
+- key 를 바꾸지 않는 경우 `map()`대신 `mapValues()` 사용 추천 (파티션 유지 가능)
+
 ## 출처
-[1] https://spark.apache.org/docs/latest/rdd-programming-guide.html
-[2] https://spark.apache.org/docs/latest/rdd-programming-guide.html#rdd-operations
+- [1] https://spark.apache.org/docs/latest/rdd-programming-guide.html
+- [2] https://spark.apache.org/docs/latest/rdd-programming-guide.html#rdd-operations
+- [3] https://thebook.io/006908/part01/ch04/03/03/01/
