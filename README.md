@@ -1,3 +1,15 @@
+## 목차
+- [용어 및 약어](용어_및_약어.md)
+- [Airflow](https://github.com/TimidLion/study/tree/main/airflow)
+- [Database](https://github.com/TimidLion/study/tree/main/database)
+- [Hadoop](https://github.com/TimidLion/study/tree/main/hadoop)
+- [Scala](https://github.com/TimidLion/study/tree/main/scala)
+- [Spark](https://github.com/TimidLion/study/tree/main/spark)
+
+#### 특징
+- **언어** : 한국어 (일부 영어)
+- 프레임워크 / 라이브러리 / 언어 등의 대분류 아래에 소분류 디렉토리 존재. 그리고 내용은 md 파일로 저장
+
 ## 우선 순위
 
 1. 스칼라 스터디
