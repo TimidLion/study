@@ -16,7 +16,17 @@
 6. Hive 테이블 생성
 7. Hive 테이블 데이터 경로로 로딩
 
+## 문법
+#### Split-by 와 Mapper
+- mapper 옵션을 통해 _병렬성_ 옵션을 줄 수 있다. [5]
+- `split-by` 옵션과 직접 parallell sqoop 기준 설정도 가능하다. 단, 한 개만 지정 가능하다 (default는 index 키) [4][7]
+    - split-by 키가 없으면 꼭 mapper 1로 설정해줄 것 [6]
+
 ## 출처
 - [1] https://github.com/apache/sqoop
 - [2] https://excelsior-cjh.tistory.com/56
 - [3] https://guide.ncloud-docs.com/docs/ko/hadoop-chadoop-4-1
+- [4] https://gritmind.blog/2020/09/29/sqoop_start/
+- [5] https://sqoop.apache.org/docs/1.4.6/SqoopUserGuide.html#_syntax
+- [6] https://stackoverflow.com/questions/33994476/can-we-split-sqoop-job-by-multiple-column-combination
+- [7] https://community.cloudera.com/t5/Support-Questions/Sqoop-import-composite-primary-key-and-textual-primary-key/td-p/145994
