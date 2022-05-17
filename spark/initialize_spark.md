@@ -16,14 +16,16 @@
 #### 스파크 아키텍쳐 [2]
 <img width="500" alt="스크린샷 2022-04-11 오후 2 21 56" src="https://user-images.githubusercontent.com/10977644/162670054-50848218-0460-438d-b4bc-874bcb8da185.png">
 
-- 클러스터 매니저 : 컴퓨터의 클러스터 리소스를 관리
-- 스파크 클러스터 매니저에서 Spark Master 프로세스가 실행된다.
-- Standalone 인 경우
-  - **Master** 에서 스파크 마스터 프로세스 실행, Slave Node의 **Worker의** Executor에서 실제 Task 실행이 일어난다.
-  - 일반적으로 클러스터에서 Spark application 을 실행할 때, `spark-submit` 을 이용해 실행하곤한다. 클러스터 매니저가 이 때 리소스 분배 및 실행 등을 관리. [4]
+- **마스터 - 워커(또는 Slave) 구조**로 되어 있다.
+  - 데이터가 여러 곳에 분산되어 있고, 여러 노드를 거쳐 연산된다.
+  - **드라이버 프로그램** : 개발할 때 중심이 되는 곳. 연산되어야할 작업들을 조직해서 보내게 됨. Transformation, action을 조직해서 워커 노드에 보내게됨. (ex. Yarn, Mesos)
+  - **클러스터 매니저** : 컴퓨터의 클러스터 리소스를 관리. 드라이버 프로그램 <-> 워커 노드 간의 
+    - 일반적으로 클러스터에서 Spark application 을 실행할 때, `spark-submit` 을 이용해 실행하곤한다. 클러스터 매니저가 이 때 리소스 분배 및 실행 등을 관리. [4]
+  - **워커 노드** : executor 가 연산을 실행하고, 데이터를 저장한다. 연산을 위한 저장 공간을 확보하기도 함.
 
 ## 출처
 - [1] https://spark.apache.org/docs/latest/rdd-programming-guide.html#initializing-spark
 - [2] https://www.samsungsds.com/kr/insights/Spark-Cluster-job-server.html
 - [3] https://spark.apache.org/docs/2.1.0/submitting-applications.html#master-urls
 - [4] https://spark.apache.org/docs/latest/submitting-applications.html
+- [5] https://www.edureka.co/blog/spark-architecture/
