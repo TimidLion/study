@@ -29,7 +29,9 @@
     - [인프런 강의](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8/dashboard)
 - 스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술
     - [인프런 강의](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-mvc-1/dashboard)
-
+- 한양대 DB 강의
+    - [KOWC 링크](http://www.kocw.net/home/search/kemView.do?kemId=1163794)
+    
 ### 책
 
 #### e-book
