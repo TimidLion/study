@@ -1,0 +1,23 @@
+# Elasticsearch
+
+## Elasticsearch
+- 정의 : 아파치 루씬 기반의 분산 검색 엔진 (JAVA 기반) [1]
+  - 방대한 데이터를 준-실시간으로 저장, 검색, 분석 가능
+
+## Log Stash
+
+## Kibana
+
+## Apache Lucene
+
+## ELK stack [1]
+- E : Elasticsearch
+- L : Logstash
+- K : Kibana
+
+를 합쳐서 부름
+
+## 참조
+- [1] https://csj000714.tistory.com/541
+- [2] https://victorydntmd.tistory.com/308
+- [3] https://esbook.kimjmin.net/01-overview/1.1-elastic-stack/1.1.1-elasticsearch
